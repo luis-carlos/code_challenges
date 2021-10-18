@@ -8,15 +8,16 @@ var solution = function(cars){
             let pair_features_diff = 0;
             if (i === j)
                 continue;
-            // console.log(`Compare ${cars[i]} to ${cars[j]}`);
+            console.log(`Compare ${cars[i]} to ${cars[j]}`);
             for (let k = 0; k < features_length; k++){
-                // console.log(`Compare ${cars[i][k]} to ${cars[j][k]}`);
-                if (cars[i][k].localeCompare(cars[j][k]) === 0){
-                    // console.log("Same feature");
+                if (pair_features_diff >=2){
+                    console.log("Stop comparing");
+                    break;
                 }
-                else {
+                console.log(`Compare ${cars[i][k]} to ${cars[j][k]}`);
+                if (cars[i][k].localeCompare(cars[j][k]) !== 0){
                     pair_features_diff++;
-                    // console.log("Different feature");
+                    console.log("Different feature");
                 }
             }
             // console.log("Different features: ", pair_features_diff);
@@ -30,4 +31,4 @@ var solution = function(cars){
         
 }
 
-console.log(solution(["0011","0111","0111","0110","0000"]));
+console.log(solution(["0011","0111","0111","0110","0000"])); // Answer is [ 2, 3, 3, 2, 0 ]
