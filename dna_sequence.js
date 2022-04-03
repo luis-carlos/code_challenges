@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/repeated-dna-sequences/
-http://www.faculty.ucr.edu/~mmaduro/random.htm
+// http://www.faculty.ucr.edu/~mmaduro/random.htm
 
 // The DNA sequence is composed of a series of nucleotides abbreviated as 'A', 'C', 'G', and 'T'.
 
