@@ -82,33 +82,9 @@ const SOURCES = {
       isAddressSrc: true,
     },
 };
-const result = {};
+const result = lo.mapValues(SOURCES, 'label');
 
-// console.log(Object.keys(SOURCES).length);
-// console.log(Object.values(SOURCES).length);
 
-// Object.keys(SOURCES).forEach(k => {
-//     console.log(k);
-//     Object.values(SOURCES[k]).forEach(j => console.log(j));
-// });
-
-console.log(SOURCES);
-
-// Object.keys(SOURCES).forEach(j => {
-//     Object.values(SOURCES[j]).forEach((k, l) => {
-//         console.log(k, l);
-//     });
-// });
-
-// for (const property in SOURCES) {
-//     console.log(`${property}: ${JSON.stringify(SOURCES[property])}`);
-// }
-
-// const result = lo.map(SOURCES,'label');
-
-for (const property in SOURCES) {
-    result[property] = SOURCES[property]['label']
-};
 
 
 console.log(result);
