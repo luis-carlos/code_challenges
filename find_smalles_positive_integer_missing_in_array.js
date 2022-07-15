@@ -1,3 +1,5 @@
+// This algorithm in Codility is passed 1 out of 5 test cases and performed correctly in 2 out of 4
+
 var solution = function(A){
     A.sort((a,b) => a-b);
     console.log(A);
