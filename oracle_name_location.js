@@ -254,12 +254,15 @@ const countryCodesAndNames = [
 ];
 
   // const label = lo.map(lo.map(countryCodesAndNames, 'label'), lo.toUpper);
-  const region = 'LAD';
+  const region = 'APAC';
   const label = lo.map(countryCodesAndNames, 'label');
+  const filter = lo.filter(countryCodesAndNames, {'region': region});
   const iso2 = lo.map(lo.filter(countryCodesAndNames,{'region': region}), 'iso2');
   const iso3 = lo.map(countryCodesAndNames, 'iso3');
 
-  console.log(iso2.join(','));
+  // console.log(iso2.join(','));
+  console.log(filter);
+  
   
   // console.log(lo.union(label, iso2, iso3).join('|'));
 
